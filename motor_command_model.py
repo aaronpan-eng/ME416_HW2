@@ -45,7 +45,7 @@ class KeysToVelocities(object):
         self.SPEED_DELTA = 0.2
         
     def update_speeds(self, key):
-        
+        text_description = String()
         if key == 'W' or key == 'w':
             if self.speed_linear + self.SPEED_DELTA > 1.0:
                 self.speed_linear = 1.0
