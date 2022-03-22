@@ -2,19 +2,20 @@
 """Collect key presses and pass them to KeysToVelocities object"""
 
 import rospy
-from motor_command_model import KeyToVelocities
+
 from std_msgs.msg import String
 import me416_utilities as mu
 from geometry_msgs.msg import Twist
 
 def main():
+    from motor_command_model import KeyToVelocities
     #initialize node publisher
     rospy.init_node('key_op', anonymous='True')
     robot_twist = Twist()
     pub = rospy.Publisher('robot_twist', Twist, queue_size=10)
 
     #create object of class KeyToVelocities
-    x = KeyToVelocities()
+    x = KeyToVelocities(object)
 
     #instructions and initializing variable types
     print('wasd for forward, left, down, and up, respectively')
