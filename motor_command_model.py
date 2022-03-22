@@ -49,30 +49,37 @@ class KeysToVelocities(object):
         if key == 'W' or key == 'w':
             if self.speed_linear + self.SPEED_DELTA > 1.0:
                 self.speed_linear = 1.0
-            self.speed_linear = self.speed_linear + self.SPEED_DELTA
+            else:
+                self.speed_linear = self.speed_linear + self.SPEED_DELTA
             text_description = "Increase linear speed"
         elif key == 'S' or key == 's':
-            if self.speed_linear + self.SPEED_DELTA < -1.0:
+            if self.speed_linear - self.SPEED_DELTA < -1.0:
                 self.speed_linear = -1.0
-            self.speed_linear = self.speed_linear - self.SPEED_DELTA
+            else:
+                self.speed_linear = self.speed_linear - self.SPEED_DELTA
             text_description = "Decrease linear speed"
         elif key == 'A' or key == 'a':
             if self.speed_angular + self.SPEED_DELTA > 1.0:
                 self.speed_angular = 1.0
-            self.speed_angular = self.speed_angular + self.SPEED_DELTA
+            else:
+                self.speed_angular = self.speed_angular + self.SPEED_DELTA
             text_description = "Increase angular speed"
         elif key == 'D' or key == 'd':
-            if self.speed_angular + self.SPEED_DELTA < -1.0:
+            if self.speed_angular - self.SPEED_DELTA < -1.0:
                 self.speed_angular = -1.0
-            self.speed_angular = self.speed_angular - self.SPEED_DELTA
+            else:
+                self.speed_angular = self.speed_angular - self.SPEED_DELTA
             text_description = "Decrease angular speed"
         elif key == 'Z' or key == 'z':
             self.speed_linear = 0
+            text_description = "linear speed set to 0"
         elif key == 'C' or key == 'c':
             self.speed_angular = 0
+            text_description = "angular speed set to 0"
         elif key == 'X' or key == 'x':
             self.speed_angular = 0
             self.speed_linear = 0
+            text_description = "linear and angular speed set to 0"
         else:
             text_description = "Invalid command"
 
