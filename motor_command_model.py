@@ -37,7 +37,7 @@ def twist_to_speeds(speed_linear, speed_angular):
 
     return left, right
 
-class KeyToVelocities(object):
+class KeysToVelocities(object):
     """Translate key presses to into velocities for the robot"""
     def __init__(self):
         self.speed_linear = 0.0
