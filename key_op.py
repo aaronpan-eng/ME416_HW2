@@ -22,7 +22,7 @@ def main():
     print('wasd for forward, left, down, and up, respectively')
     speed_angular = float()
     speed_linear = float()
-    text_description = String()
+    text = String()
     getch = mu._Getch()
 
     while not rospy.is_shutdown():
@@ -36,10 +36,10 @@ def main():
                 'Shutting down initiated by %s' % rospy.get_name())
         else:
             #any other key pressed
-            speed_angular, speed_linear, text_description = x.update_speeds(key)
+            speed_angular, speed_linear, text = x.update_speeds(key)
 
             #print output of update_speeds
-            print(text_description)
+            print(text)
             robot_twist.linear.x = speed_linear
             robot_twist.angular.z = speed_angular
 
