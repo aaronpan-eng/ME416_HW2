@@ -16,7 +16,7 @@ def main():
     pub = rospy.Publisher('robot_twist', Twist, queue_size=10)
 
     #create object of class KeyToVelocities
-    x = KeysToVelocities(object)
+    x = KeysToVelocities()
 
     #instructions and initializing variable types
     print('wasd for forward, left, down, and up, respectively')
