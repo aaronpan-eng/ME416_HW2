@@ -5,6 +5,7 @@
 from xml.dom.expatbuilder import ElementInfo
 import numpy as np
 from math import cos, sin
+import me416_utilities
 from std_msgs.msg import String
 
 def model_parameters():
