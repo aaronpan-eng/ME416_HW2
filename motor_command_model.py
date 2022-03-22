@@ -43,8 +43,6 @@ class KeysToVelocities(object):
         self.speed_linear = 0.0
         self.speed_angular = 0.0
         self.SPEED_DELTA = 0.2
-        text_description = String()
-        key = String()
         
     def update_speeds(self, key):
         
